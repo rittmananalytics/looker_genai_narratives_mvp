@@ -132,15 +132,24 @@ This query generates a narrative summarizing the overall performance based on th
 
 ### Google Cloud Roles and Permissions
 
-To implement this solution, Rittman Analytics developers require the following Google Cloud roles and permissions:
+To implement this solution, Rittman Analytics developers require the following Google Cloud roles and permissions and APIs enabled:
 
 - **BigQuery:**
-- `bigquery.dataEditor`: To create, modify, and query tables in BigQuery.
-- `bigquery.models.create`: To register the Vertex AI LLM model within BigQuery.
-- `bigquery.readSessions.create`: To utilize the `ML.GENERATE_TEXT` function and interact with the LLM.
+- `bigquery.admin`: Required for creating datasets, tables, and models.
+- `bigquery.user`: Required for querying data and running models.
+- `bigquery.jobUser`: Required for creating and managing BigQuery ML jobs.
+
 - **Vertex AI:**
-- `aiplatform.endpointReader`: To access the deployed Gemini 1.5-Flash model.
-- `iam.serviceAccountUser`: To authenticate to Vertex AI using a service account with the appropriate permissions.
+- `aiplatform.user`: Required for interacting with Vertex AI models.
+- `iam.serviceAccountUser`: Required for creating and managing service accounts for accessing Vertex AI.
+
+- **Cloud Resource Manager:**
+- `resourcemanager.projectViewer`: Required for listing and viewing project details.
+
+### Google Cloud APIs
+
+- **BigQuery API**
+- **Vertex AI API**
 
 ### Conclusion
 
