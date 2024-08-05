@@ -27,7 +27,7 @@ This solution utilizes various Google Cloud and third-party products and service
 
 #### 1. Data Collection and Preparation
 
-1. **Create Looker Looks:** Develop Looker looks (reports) to aggregate and visualize the relevant KPIs.
+1. **Create Looker Looks:** Develop Looker looks (reports) to aggregate and visualize the relevant KPIs, for example revenue and sales KPIs, by store, period and high-level sales category
 2. **Extract SQL Queries:** Utilize the "View SQL" feature in Looker to obtain the underlying SQL queries for the defined looks.
 3. **Data Transformation with Dataform:**
 - Utilize the extracted SQL queries as the basis for Dataform configurations.
@@ -128,7 +128,7 @@ This query generates a narrative summarizing the overall performance based on th
 #### 6. Visualizing the Narratives in Looker
 
 1. **Create a Looker LookML View:** Define a new LookML view based on the BigQuery table containing the generated narratives.
-2. **Add Table Visualization:** In your Looker dashboard, incorporate a "Table" visualization using the new LookML view as its data source. This table will display the generated narratives alongside your other KPI visualizations.
+2. **Add Table (Report) Visualization:** In your Looker dashboard, incorporate a "Table (Report)" visualization using the new LookML view as its data source. This table will display the generated narratives alongside your other KPI visualizations.
 
 ### Google Cloud Roles and Permissions
 
